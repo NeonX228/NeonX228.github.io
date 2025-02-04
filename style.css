@@ -22,13 +22,6 @@ header h1 {
 header p {
     font-size: 1.1em;
 }
-header code {
-    color: #b5b5ce;
-}
-
-#about code {
-    color: #b5b5ce;
-}
 
 /* Sections */
 section {
@@ -56,18 +49,18 @@ section {
 
 .project {
     position: relative;
-    width: 300px;
+    width: 250px;
     background: #222;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 7px 0px rgb(20, 20, 20);
     transition: background 0.3s;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
 }
 
 .project:hover {
@@ -127,8 +120,8 @@ section {
 
 /* Fix Icon Size */
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -153,9 +146,10 @@ a.button:hover {
 #contact a {
     display: inline-block;
     margin: 10px;
-    padding: 12px 20px;
+    padding: 7px 12px;
     background: #333;
     color: white;
+    box-shadow: 0px 7px 0px rgb(20, 20, 20);
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
@@ -263,6 +257,8 @@ footer {
     color: #E0E0E0;
 }
 
+.modal-body li:before { content: "📌 "; }
+
 .modal-body ul {
     list-style-type: none;
     padding: 0;
@@ -304,6 +300,7 @@ code {
     padding: 3px 3px;
     border-radius: 3px;
     background-color: #292929;
+    color: #b5b5ce;
 }
 
 .saxion {

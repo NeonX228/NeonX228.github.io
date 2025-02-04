@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: #121212; /* Dark background */
-    color: #E0E0E0; /* Light gray text */
+    background: #121212;
+    color: #E0E0E0;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -20,18 +20,24 @@ header h1 {
 }
 
 header p {
-    font-style: italic;
     font-size: 1.1em;
+}
+header code {
+    color: #b5b5ce;
+}
+
+#about code {
+    color: #b5b5ce;
 }
 
 /* Sections */
 section {
-    width: 80%;
+    width: 45%;
     margin: 30px auto;
     padding: 25px;
-    background: #1A1A1A; /* Dark card-like sections */
+    background: #1A1A1A;
     border-radius: 10px;
-    box-shadow: 10px 10px 0px rgba(10, 10, 10, 0.1);
+    box-shadow: 10px 10px 0px rgb(14, 14, 14);
 }
 
 #about h2::before { content: "🧑‍💻 "; }
@@ -49,20 +55,53 @@ section {
 }
 
 .project {
-    background: #222;
-    padding: 20px;
-    border-radius: 8px;
+    position: relative;
     width: 300px;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     transition: background 0.3s;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .project:hover {
     background: #363636;
 }
 
+.project img.modal-main-img {
+    width: 100%;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.project-text {
+    margin-top: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #E0E0E0;
+}
+
+.project-text h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 .project h3::before {
-    content: "🎯 "; /* Target emoji for project titles */
+    content: "🎯 ";
+}
+
+.project-text p {
+    margin: 0;
 }
 
 .button {
@@ -88,9 +127,9 @@ section {
 
 /* Fix Icon Size */
 .icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain; /* Keeps aspect ratio */
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 /* Buttons */
@@ -153,23 +192,24 @@ footer {
 .modal-content {
     background: #222;
     border-radius: 10px;
-    width: 60%;
+    width: 90%;
+    max-width: 800px;
     text-align: center;
     overflow: hidden;
+    margin: 0 auto;
 }
-
 /* MODAL HEADER (BLURRED BACKGROUND) */
 .modal-header {
     position: relative;
-    height: 250px; /* Adjust as needed */
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    padding: 20px;
+    max-height: 70vh;
     overflow: hidden;
+    box-sizing: border-box;
 }
-
 /* Blurred Background */
 .modal-bg {
     position: absolute;
@@ -194,12 +234,14 @@ footer {
 /* Centered Main Image */
 .modal-main-img {
     position: relative;
-    width: 50%;  /* Scales dynamically */
-    max-width: 250px; /* Prevents excessive scaling */
+    width: auto;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     z-index: 2;
-    margin-bottom: 15px; /* Space between image and title */
+    margin: 0 auto 15px;
+    max-height: 20vh;
+    object-fit: contain;
 }
 
 /* Title Over Blurred Background */
@@ -209,7 +251,7 @@ footer {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 0; /* Remove extra spacing */
+    margin-top: 0;
     text-align: center;
     width: 100%;
 }
@@ -233,6 +275,7 @@ footer {
 /* Buttons */
 .modal-buttons {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
@@ -245,8 +288,24 @@ footer {
     cursor: pointer;
     border-radius: 5px;
     height: 50px;
+    margin-left: auto;
 }
 
 .close-btn:hover {
-    background: #cc0000;
+    background: #531f1f;
+}
+
+#contact .button{
+    width: auto;
+}
+
+code {
+    font-size: larger;
+    padding: 3px 3px;
+    border-radius: 3px;
+    background-color: #292929;
+}
+
+.saxion {
+    color: #009c82;
 }

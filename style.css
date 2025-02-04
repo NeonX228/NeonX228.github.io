@@ -161,11 +161,12 @@ footer {
 /* MODAL HEADER (BLURRED BACKGROUND) */
 .modal-header {
     position: relative;
-    height: 250px; /* Adjust height based on content */
+    height: 250px; /* Adjust as needed */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
     justify-content: center;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -193,11 +194,12 @@ footer {
 /* Centered Main Image */
 .modal-main-img {
     position: relative;
-    width: 50%;  /* Adjust size dynamically */
-    max-width: 300px; /* Prevent too large scaling */
+    width: 50%;  /* Scales dynamically */
+    max-width: 250px; /* Prevents excessive scaling */
     height: auto;
     border-radius: 10px;
     z-index: 2;
+    margin-bottom: 15px; /* Space between image and title */
 }
 
 /* Title Over Blurred Background */
@@ -207,8 +209,9 @@ footer {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 0; /* Remove extra spacing */
     text-align: center;
+    width: 100%;
 }
 
 /* MODAL BODY */

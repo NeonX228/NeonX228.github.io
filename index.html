@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="/neonx228/style.css">
+    <title>Daniel Haller - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    function openModal(id) {
+        document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+</script>
+
 <body>
 
     <header>
@@ -27,28 +37,82 @@
     <section id="best-work">
         <h2>Best Work</h2>
         <div class="projects">
-            <div class="project">
+            <div onclick="openModal('project1')" class="project">
+                <img src="images/projects/project1-main.png" alt="Project Background" class="modal-main-img">
                 <h3>Time-Travelling Droplet</h3>
                 <p>A 2D side-scrolling platformer where time travel isn’t just a gimmick—it’s survival.
                     Switch between two world states to dodge obstacles and reach the finish line. Perfect timing is the key (and maybe a little bit of luck).</p>
-                <p>Tech: Godot (GDScript)</p>
-                <p>Project Type: Team project</p>
-                <p>Team Size: 2 members</p>
-                <p>Development Time: 2 weeks</p>
-                <a href="#">View Project</a>
             </div>
-            <div class="project">
+            <div onclick="openModal('project2')" class="project">
+                <img src="images/projects/project2-main.png" alt="Project Background" class="modal-main-img">
                 <h3>Self-Sabotage</h3>
                 <p>A 3D murder-mystery puzzle solving game. Made in SPX style. Each day feels normal—until you take out the trash. Locked doors, missing keys, and unsettling whispers hint at a truth your mind refuses to accept. Someone is working against you… but is it yourself?</p>
-                <p>Tech: Unity (C#)</p>
-                <p>Project Type: Team project</p>
-                <p>Team Size: 6 members</p>
-                <p>Development Time: 3 weeks</p>
-                <a href="#">View Project</a>
             </div>
             <!-- Add more projects here -->
         </div>
     </section>
+
+    <!-- Pop-up Window -->
+    <!-- Pop-up Window -->
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <!-- Blurred Background with Centered Image -->
+            <div class="modal-header">
+                <div class="modal-bg">
+                    <img src="images/projects/project1-main.png" alt="Project Background" class="modal-blurred-img">
+                    <img src="images/projects/project1-main.png" alt="Project Main Image" class="modal-main-img">
+                    <h2 class="modal-title">SELF-SABOTAGE</h2>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="modal-body">
+                <p>A 2D side-scrolling platformer where time travel isn’t just a gimmick—it’s survival. Switch between two world states to dodge obstacles and reach the finish line. Perfect timing is the key (and maybe a little bit of luck).</p>
+                <ul>
+                    <li><strong>Tech:</strong> Godot (GDScript)</li>
+                    <li><strong>Project Type:</strong> Team project</li>
+                    <li><strong>Team Size:</strong> 2 members</li>
+                    <li><strong>Development Time:</strong> 2 weeks</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="#" target="_blank" class="button">🔗 View Source</a>
+                    <a href="https://drive.google.com/file/d/10ZrBMApJwLNg7jRDZ4HiQYOW4oqQDFBY/view?usp=sharing" target="_blank" class="button">🎮 Play</a>
+                    <button onclick="closeModal('project1')" class="close-btn">❌ Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <!-- Blurred Background with Centered Image -->
+            <div class="modal-header">
+                <div class="modal-bg">
+                    <img src="images/projects/project2-main.png" alt="Project Background" class="modal-blurred-img">
+                    <img src="images/projects/project2-main.png" alt="Project Main Image" class="modal-main-img">
+                    <h2 class="modal-title">SELF-SABOTAGE</h2>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="modal-body">
+                <p>A 3D murder-mystery puzzle solving game. Made in SPX style. Each day feels normal—until you take out the trash. Locked doors, missing keys, and unsettling whispers hint at a truth your mind refuses to accept. Someone is working against you… but is it yourself?</p>
+                <ul>
+                    <li><strong>Tech:</strong> Unity (C#)</li>
+                    <li><strong>Project Type:</strong> Team project</li>
+                    <li><strong>Team Size:</strong> 6 members</li>
+                    <li><strong>Development Time:</strong> 3 weeks</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="#" target="_blank" class="button">🔗 View Source</a>
+                    <a href="https://play.unity.com/en/games/fe177b89-69ac-48c2-a5e3-3b2938112c56/self-sabotage" target="_blank" class="button">🎮 Play</a>
+                    <button onclick="closeModal('project2')" class="close-btn">❌ Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <section id="design-philosophy">
         <h2>Design Philosophy</h2>
